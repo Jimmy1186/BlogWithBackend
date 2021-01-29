@@ -13,7 +13,7 @@ app.post("/upload", (req, res) => {
 
   const file = req.files.file;
 
-  file.mv(`${__dirname}/client/data/img/${file.name}`, (err) => {
+  file.mv(`${__dirname}/client/public/img/${file.name}`, (err) => {
     if (err) {
       console.error(err);
       return res.status(500).send(err);
